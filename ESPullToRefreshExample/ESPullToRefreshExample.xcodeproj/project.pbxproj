@@ -331,7 +331,7 @@
 					};
 					F692000B1CDB9A530029EF47 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = A367N9R36B;
+						DevelopmentTeam = 55UZ92U4DX;
 						LastSwiftMigration = 1000;
 					};
 				};
@@ -625,12 +625,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 2.9.2;
-				DEVELOPMENT_TEAM = A367N9R36B;
+				DEVELOPMENT_TEAM = 55UZ92U4DX;
 				INFOPLIST_FILE = ESPullToRefreshExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 2.9.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.eggswift.ESPullToRefreshExample11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.eggswift.ESPullToRefreshExample11-111";
 				PRODUCT_NAME = Example;
 				SWIFT_VERSION = 5.0;
 			};
@@ -643,12 +643,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 2.9.2;
-				DEVELOPMENT_TEAM = A367N9R36B;
+				DEVELOPMENT_TEAM = 55UZ92U4DX;
 				INFOPLIST_FILE = ESPullToRefreshExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 2.9.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.eggswift.ESPullToRefreshExample11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.eggswift.ESPullToRefreshExample11-111";
 				PRODUCT_NAME = Example;
 				SWIFT_VERSION = 5.0;
 			};

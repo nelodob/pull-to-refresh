@@ -44,10 +44,15 @@ public extension UIScrollView {
     }
 }
 
+public enum PositionESPullToRefresh{
+    case header
+    case footer
+}
+
 public extension ES where Base: UIScrollView {
     /// Add pull-to-refresh
     @discardableResult
-    func addPullToRefresh(handler: @escaping ESRefreshHandler) -> ESRefreshHeaderView {
+    func addPullToRefresh(_ position: PositionESPullToRefresh = .header,handler: @escaping ESRefreshHandler) -> ESRefreshHeaderView {
         removeRefreshHeader()
         let header = ESRefreshHeaderView(frame: CGRect.zero, handler: handler)
         let headerH = header.animator.executeIncremental
@@ -56,9 +61,9 @@ public extension ES where Base: UIScrollView {
         self.base.header = header
         return header
     }
-    
+
     @discardableResult
-    func addPullToRefresh(animator: ESRefreshProtocol & ESRefreshAnimatorProtocol, handler: @escaping ESRefreshHandler) -> ESRefreshHeaderView {
+    func addPullToRefresh(_ position: PositionESPullToRefresh = .header,animator: ESRefreshProtocol & ESRefreshAnimatorProtocol, handler: @escaping ESRefreshHandler) -> ESRefreshHeaderView {
         removeRefreshHeader()
         let header = ESRefreshHeaderView(frame: CGRect.zero, handler: handler, animator: animator)
         let headerH = animator.executeIncremental
@@ -67,10 +72,10 @@ public extension ES where Base: UIScrollView {
         self.base.header = header
         return header
     }
-    
+
     /// Add infinite-scrolling
     @discardableResult
-    func addInfiniteScrolling(handler: @escaping ESRefreshHandler) -> ESRefreshFooterView {
+    func addInfiniteScrolling(_ position: PositionESPullToRefresh = .footer,handler: @escaping ESRefreshHandler) -> ESRefreshFooterView {
         removeRefreshFooter()
         let footer = ESRefreshFooterView(frame: CGRect.zero, handler: handler)
         let footerH = footer.animator.executeIncremental
@@ -81,7 +86,7 @@ public extension ES where Base: UIScrollView {
     }
 
     @discardableResult
-    func addInfiniteScrolling(animator: ESRefreshProtocol & ESRefreshAnimatorProtocol, handler: @escaping ESRefreshHandler) -> ESRefreshFooterView {
+    func addInfiniteScrolling(_ position: PositionESPullToRefresh = .footer,animator: ESRefreshProtocol & ESRefreshAnimatorProtocol, handler: @escaping ESRefreshHandler) -> ESRefreshFooterView {
         removeRefreshFooter()
         let footer = ESRefreshFooterView(frame: CGRect.zero, handler: handler, animator: animator)
         let footerH = footer.animator.executeIncremental
